@@ -6,6 +6,8 @@
     background-position: center;
     border:1px solid white ;
     margin-left: 18px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {

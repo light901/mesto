@@ -6,12 +6,12 @@
     font-weight: 500;
     font-size: 42px;
     line-height: 48px;
-    text-align: center;
 }
 
 @media screen and (max-width: 550px) {
     .profile-info__name {
         font-size: 27px;
         line-height: 33px;
+        text-align: center;
     }
-    }
+}

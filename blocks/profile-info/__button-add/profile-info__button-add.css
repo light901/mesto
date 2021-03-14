@@ -6,6 +6,8 @@
     background-repeat: no-repeat;
     background-position: center;
     border:2.5px solid white ;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 
