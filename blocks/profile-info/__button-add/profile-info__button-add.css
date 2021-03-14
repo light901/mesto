@@ -5,11 +5,10 @@
     background-image:url(../../../images/plus.png);
     background-repeat: no-repeat;
     background-position: center;
-    border:2.5px solid white ;
+    border:2.5px solid white;
     cursor: pointer;
     background-color: transparent;
 }
-
 
 @media screen and (max-width: 500px) {
     .profile-info__button-add  {
