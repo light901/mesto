@@ -15,7 +15,7 @@ function closePopup() {
     popup.classList.remove('popup_opened');
 }
 
-let buttonEdit = document.querySelector('.profile-info__buttonedit');
+let buttonEdit = document.querySelector('.profile__buttonedit');
 
 // кнопка открытия+ вставка текста с сайта
 buttonEdit.addEventListener('click', function () {
