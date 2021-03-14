@@ -1,0 +1,12 @@
+.elements__card {
+    background-color: white;
+    border-radius: 15px;
+    max-width: 282px;
+    max-height: 361px;
+}
+
+@media screen and (max-width: 1000px) {
+    .elements__card  {
+        max-width: 1000px;
+    }
+    }
