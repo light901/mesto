@@ -11,13 +11,13 @@
 <body class="root">
     <div class="popup">
         <div class="popup__overlay"></div>
-        <div class="popup__container">
+        <form class="popup__container">
             <h3 class="popup__title">Редактировать профиль</h3>
-            <input type="text" class="popup__input-text" id="nameform">
-            <input type="text" class="popup__input-text" id="jobform">
-            <button type="button" class="popup__save-button animated-link">Сохранить</button>
-            <button type="submit" class="popup__close-button animated-link"></button>
-        </div>
+            <input type="text" class="popup__input-text name">
+            <input type="text" class="popup__input-text job">
+            <button type="submit" class="popup__save-button animated-link">Сохранить</button>
+            <button type="button" class="popup__close-button animated-link"></button>
+        </form>
     </div>
     <header class="header">
         <img class="header__logo" src="./images/Vector.png" alt="логотип">
@@ -26,10 +26,10 @@
         <section class="profile">
             <div class="profile__cointainer">
                 <img src="./images/Avatar.png" alt="аватар">
-                <div class="obertka">
+                <div class="profile__mobile">
                     <div class="profile-info">
-                        <h1 class="profile-info__name" id="name">Жак-Ив Кусто</h1>
-                        <p class="profile-info__text" id="job">Исследователь океана</p>
+                        <h1 class="profile-info__name namen">Жак-Ив Кусто</h1>
+                        <p class="profile-info__text jobj">Исследователь океана</p>
                     </div>
                     <button type="button" class="profile__buttonedit animated-link"></button>
                 </div>

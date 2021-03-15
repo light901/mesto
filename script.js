@@ -1,8 +1,9 @@
 let popup = document.querySelector('.popup');
-let nameInput = document.getElementById('name');
-let jobInput = document.getElementById('job');
-let nameform = document.getElementById('nameform')
-let jobform = document.getElementById('jobform')
+let nameInput = document.querySelector('.namen');
+let jobInput = document.querySelector('.jobj');
+let nameform = document.querySelector('.name');
+let jobform = document.querySelector('.job');
+let formElement = document.querySelector('.popup__container')
 
 
 function openPopup() {
@@ -31,10 +32,10 @@ buttonClose.addEventListener('click', function () {
 
 let buttonSave = document.querySelector('.popup__save-button');
 
-// кнопка сохранить и закрыть окно
-buttonSave.addEventListener('click', function () {
+function formSubmitHandler(evt) {
+    evt.preventDefault();
     nameInput.textContent = nameform.value;
     jobInput.textContent = jobform.value;
     closePopup();
-})
-
+}
+formElement.addEventListener('submit', formSubmitHandler);

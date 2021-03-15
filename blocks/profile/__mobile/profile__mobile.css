@@ -1,9 +1,9 @@
-.obertka {
+.profile__mobile {
     display: flex;
 }
 
 @media screen and (max-width: 500px) {
-    .obertka {
+    .profile__mobile {
         margin-top: 26px;
         margin-bottom: 14px;
       }
