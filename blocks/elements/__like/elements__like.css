@@ -9,7 +9,12 @@
     cursor: pointer;
     background-color: transparent;
     outline: none;
+    transition: opacity 0.3s ease-out;
 }
 .elements__like:active {
-    background-image: url(../../../images/Union.png);
+    background-image: url(../../../images/Union.svg);
 }
+
+.elements__like:hover {
+    opacity: 0.5;
+  }

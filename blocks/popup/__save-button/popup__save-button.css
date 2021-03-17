@@ -13,14 +13,20 @@
     margin-top: 10px;
     border: none;
     border-radius: 2px;
+    transition: opacity 0.3s ease-out;
 }
+
+.popup__save-button:hover{
+    opacity: 0.8;
+}
+
 
 @media screen and (max-width: 600px) {
   .popup__save-button {
     font-size: 14px;
     line-height: 17px;
     max-width: 238px;
-    margin-left: 25px;
+    margin-left: 22px;
     height: 46px;
     width: 238px;
   }

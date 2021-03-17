@@ -6,15 +6,21 @@
     background-position: center;
     border:1px solid white;
     margin-left: 18px;
+    margin-top: -16px;
     background-color: transparent;
     cursor: pointer;
     align-self: center;
-}
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .profile__button-edit:hover {
+    opacity: 0.6;
+  }
 
 @media screen and (max-width: 500px) {
-    .profile__button-edit {
-        margin: 0;
-        width: 18px;
-        height: 18px;
-      }
-    }
+  .profile__button-edit {
+    margin-left: 0px;
+    width: 18px;
+    height: 18px;
+  }
+}

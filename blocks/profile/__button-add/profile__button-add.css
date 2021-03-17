@@ -8,6 +8,11 @@
     border:2px solid white;
     cursor: pointer;
     background-color: transparent;
+    transition: opacity 0.3s ease-out;
+}
+
+.profile__button-add:hover {
+    opacity: 0.6;
 }
 
 @media screen and (max-width: 500px) {
