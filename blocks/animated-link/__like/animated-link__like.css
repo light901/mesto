@@ -1,7 +1,7 @@
-.animated-link_like {
+.animated-link__like {
     transition: opacity 0.3s ease-out;
   }
 
-  .animated-link_like:hover {
+  .animated-link__like:hover {
     opacity: 0.5;
   }
