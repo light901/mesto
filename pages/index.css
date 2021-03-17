@@ -29,5 +29,5 @@
 @import url(../blocks/popup/__save-button/popup__save-button.css);
 @import url(../blocks/popup/__input-text/popup__input-text.css);
 @import url(../blocks/animated-link/animated-link.css);
-@import url(../blocks/animated-link/__like/animated-link__like.css);
-@import url(../blocks/animated-link/__edit-close-add/animated-link__edit-close-add.css);
+@import url(../blocks/animated-link/_like/animated-link_like.css);
+@import url(../blocks/animated-link/_edit-close-add/animated-link_edit-close-add.css);
