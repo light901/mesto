@@ -17,7 +17,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   .elements__cards {
     grid-template-columns: 1fr;
     column-gap: 19px;
