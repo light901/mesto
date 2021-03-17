@@ -1,20 +1,20 @@
 .popup__close-button {
     width: 40px;
     height: 40px;
-    background-image: url(../../../images/krest.png);
+    background-image: url(../../../images/krest.svg);
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    right: -40px;
-    top: -40px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-top: -78px;
+    margin-left: 428px;
 }
-@media screen and (max-width: 500px) {
-    .popup__close-button {
-        width: 26px;
-        height: 26px;
-        right: 0px;
-      }
-    }
+@media screen and (max-width: 600px) {
+  .popup__close-button {
+    width: 26px;
+    height: 26px;
+    margin-top: -88px;
+    margin-left: 255px;
+  }
+}

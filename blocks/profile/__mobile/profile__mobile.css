@@ -1,10 +1,10 @@
 .profile__mobile {
-    display: flex;
+  display: flex;
 }
 
 @media screen and (max-width: 500px) {
-    .profile__mobile {
-        margin-top: 26px;
-        margin-bottom: 14px;
-      }
-    }
+  .profile__mobile {
+    margin-top: 26px;
+    margin-bottom: 36px;
+  }
+}

@@ -1,0 +1,7 @@
+.animated-link_edit-close-add {
+    transition: opacity 0.3s ease-out;
+  }
+
+  .animated-link_edit-close-add:hover {
+    opacity: 0.6;
+  }

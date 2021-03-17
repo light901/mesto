@@ -8,4 +8,8 @@
     border: none;
     cursor: pointer;
     background-color: transparent;
+    outline: none;
+}
+.elements__like:active {
+    background-image: url(../../../images/Union.png);
 }

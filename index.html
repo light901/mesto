@@ -9,18 +9,8 @@
 </head>
 
 <body class="root">
-    <div class="popup">
-        <div class="popup__overlay"></div>
-        <form class="popup__container">
-            <h3 class="popup__title">Редактировать профиль</h3>
-            <input type="text" class="popup__input-text name">
-            <input type="text" class="popup__input-text job">
-            <button type="submit" class="popup__save-button animated-link">Сохранить</button>
-            <button type="button" class="popup__close-button animated-link"></button>
-        </form>
-    </div>
     <header class="header">
-        <img class="header__logo" src="./images/Vector.png" alt="логотип">
+        <img class="header__logo" src="./images/Vector.svg" alt="логотип">
     </header>
     <main>
         <section class="profile">
@@ -28,13 +18,13 @@
                 <img src="./images/Avatar.png" alt="аватар">
                 <div class="profile__mobile">
                     <div class="profile-info">
-                        <h1 class="profile-info__name namen">Жак-Ив Кусто</h1>
-                        <p class="profile-info__text jobj">Исследователь океана</p>
+                        <h1 class="profile-info__name">Жак-Ив Кусто</h1>
+                        <p class="profile-info__text">Исследователь океана</p>
                     </div>
-                    <button type="button" class="profile__buttonedit animated-link"></button>
+                    <button type="button" class="profile__button-edit animated-link_edit-close-add"></button>
                 </div>
             </div>
-            <button type="button" class="profile__buttonadd animated-link"></button>
+            <button type="button" class="profile__button-add animated-link_edit-close-add"></button>
         </section>
         <section class="elements">
             <ul class="elements__cards">
@@ -42,51 +32,67 @@
                     <img src="./images/1.jpg" alt="фото сноубордиста" class="elements__image">
                     <div class="elements__info">
                         <h2 class="elements__text">Карачаевск</h2>
-                        <button type="button" class="elements__like animated-link"></button>
+                        <button type="button" class="elements__like animated-link_like"></button>
                     </div>
                 </li>
                 <li class="elements__card">
                     <img src="./images/2.jpg" alt="фото сноубордистки" class="elements__image">
                     <div class="elements__info">
                         <h2 class="elements__text">Гора Эльбрус</h2>
-                        <button type="button" class="elements__like animated-link"></button>
+                        <button type="button" class="elements__like animated-link_like"></button>
                     </div>
                 </li>
                 <li class="elements__card">
                     <img src="./images/3.jpg" alt="фото сноубордиста" class="elements__image">
                     <div class="elements__info">
                         <h2 class="elements__text">Домбай</h2>
-                        <button type="button" class="elements__like animated-link"></button>
+                        <button type="button" class="elements__like animated-link_like"></button>
                     </div>
                 </li>
                 <li class="elements__card">
                     <img src="./images/4.jpg" alt="фото сноубордиста" class="elements__image">
                     <div class="elements__info">
                         <h2 class="elements__text">Гора Эльбрус</h2>
-                        <button type="button" class="elements__like animated-link"></button>
+                        <button type="button" class="elements__like animated-link_like"></button>
                     </div>
                 </li>
                 <li class="elements__card">
                     <img src="./images/5.jpg" alt="фото сноубордиста" class="elements__image">
                     <div class="elements__info">
                         <h2 class="elements__text">Домбай</h2>
-                        <button type="button" class="elements__like animated-link"></button>
+                        <button type="button" class="elements__like animated-link_like"></button>
                     </div>
                 </li>
                 <li class="elements__card">
                     <img src="./images/6.jpg" alt="фото сноубордистки" class="elements__image">
                     <div class="elements__info">
                         <h2 class="elements__text">Карачаевск</h2>
-                        <button type="button" class="elements__like animated-link"></button>
+                        <button type="button" class="elements__like animated-link_like"></button>
                     </div>
                 </li>
             </ul>
         </section>
     </main>
-    <section class="footer">
+    <footer class="footer">
         <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
-    </section>
-    <script src="script.js"></script>
+    </footer>
+    <div class="popup">
+    <div class="popup__main">
+        <div class="popup__container">
+            <button type="button" class="popup__close-button animated-link_edit-close-add"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form name="edit-form" class="input-form">
+                <input type="text" name="set-name" placeholder="Как вас зовут?" size="50"
+                    class="popup__input-text popup__input-text_name">
+                <input type="text" name="set-job" placeholder="Кем вы работаете?" size="50"
+                    class="popup__input-text popup__input-text_job">
+                    <button type="submit" class="popup__save-button animated-link">Сохранить</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="./script/index.js"></script>
+
 </body>
 
 </html>

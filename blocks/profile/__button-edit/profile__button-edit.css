@@ -1,17 +1,20 @@
-.profile__buttonedit {
+.profile__button-edit {
     width: 24px;
     height: 24px;
-    background-image:url(../../../images/karandaw.png);
+    background-image:url(../../../images/karandaw.svg);
     background-repeat: no-repeat;
     background-position: center;
     border:1px solid white;
     margin-left: 18px;
     background-color: transparent;
     cursor: pointer;
+    align-self: center;
 }
 
 @media screen and (max-width: 500px) {
-    .profile__buttonedit {
+    .profile__button-edit {
         margin: 0;
+        width: 18px;
+        height: 18px;
       }
     }
