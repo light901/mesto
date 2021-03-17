@@ -9,8 +9,8 @@
     cursor: pointer;
     transition: opacity 0.3s ease-out;
     position: absolute;
-    margin-top: -368px;
-    margin-left: 420px;
+    top: -50px;
+    right: -50px;
     background-size: cover;
     padding: 0%;
   }
@@ -23,7 +23,7 @@
   .popup__close-button {
     width: 38px;
     height: 38px;
-    margin-top: -388px;
-    margin-left: 246px;
+    top: -50px;
+    right: 0px;
   }
 }
