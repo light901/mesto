@@ -104,7 +104,7 @@ function createCard(cardData) {
 }
 
 function createCards(){
-	let placeElements = document.createDocumentFragment();
+	const placeElements = document.createDocumentFragment();
 	initialCards.forEach(function (element, index) {
 		placeElements.appendChild(createCard(element));
 	});
