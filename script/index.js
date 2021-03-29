@@ -66,8 +66,8 @@ function formSubmitHandlerPopupAdd(evt) {
 	const placeValue = placeInput.value;
 	const linkInput = document.querySelector('.popup__input-text_type_link');
 	const placeLink = linkInput.value;
-	let arr = { name: placeValue, link: placeLink };
-	let placeElement = createCard(arr);
+	const arr = { name: placeValue, link: placeLink };
+	const placeElement = createCard(arr);
 	places.prepend(placeElement);
 	closePopup(this.closest('.popup'));
 	linkInput.value = '', placeInput.value = '';
@@ -83,9 +83,9 @@ buttonClose.addEventListener('click', function(){ closePopup(this.closest('.popu
 formElement.addEventListener('submit', formSubmitHandler);
 
 function createCard(cardData) {
-	let element = cardTemplate.cloneNode(true);
-	let picture = document.querySelector('.popup-image__picture');
-	let caption = document.querySelector('.popup-image__caption');
+	const element = cardTemplate.cloneNode(true);
+	const picture = document.querySelector('.popup-image__picture');
+	const caption = document.querySelector('.popup-image__caption');
 	element.querySelector('.elements__text').textContent = cardData.name;
     element.querySelector('.elements__image').src = cardData.link;
 	element.querySelector('.elements__like').addEventListener('click', function(evt){
@@ -97,6 +97,7 @@ function createCard(cardData) {
     element.querySelector('.elements__image').addEventListener('click', function(evt){
         popupFullImage.classList.add('popup_opened')
         picture.src = evt.target.src;
+        picture.alt = cardData.name;
         caption.textContent = cardData.name;
     });
 	return element;
