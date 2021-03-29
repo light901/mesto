@@ -95,7 +95,7 @@ function createCard(cardData) {
 		evt.target.closest('.elements__card').remove();
 	});
     element.querySelector('.elements__image').addEventListener('click', function(evt){
-        popupFullImage.classList.add('popup_opened')
+        openPopup(popupFullImage);
         picture.src = evt.target.src;
         picture.alt = cardData.name;
         caption.textContent = cardData.name;
