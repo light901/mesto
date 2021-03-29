@@ -1,5 +1,6 @@
 .elements {
     max-width: 880px;
+	min-height: 600px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
