@@ -88,6 +88,7 @@ function createCard(cardData) {
 	const caption = document.querySelector('.popup-image__caption');
 	element.querySelector('.elements__text').textContent = cardData.name;
     element.querySelector('.elements__image').src = cardData.link;
+    element.querySelector('.elements__image').alt = cardData.name;
 	element.querySelector('.elements__like').addEventListener('click', function(evt){
 		evt.target.classList.toggle('elements__like_active'); 
 	});
