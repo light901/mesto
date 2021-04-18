@@ -46,12 +46,20 @@
         <div class="popup__container">
             <button type="button" class="popup__close-button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form name="edit-form" class="popup__form">
-                <input type="text" name="set-name" placeholder="Как вас зовут?" size="50"
-                    class="popup__input-text popup__input-text_type_name">
-                <input type="text" name="set-job" placeholder="Кем вы работаете?" size="50"
-                    class="popup__input-text popup__input-text_type_job">
-                <button type="submit" class="popup__save-button">Сохранить</button>
+            <form name="edit-form" class="popup__form form">
+				<fieldset class="form__set">
+					<label class="form__field">
+						<input type="text" name="set-name" id="set-name-input" placeholder="Как вас зовут?" size="50"
+							class="popup__input-text popup__input-text_type_name" required minlength="2" maxlength="40">
+						<span class="form__input-error set-name-input-error"></span>
+					</label>
+					<label class="form__field">
+						<input type="text" name="set-job" id="set-job-input" placeholder="Кем вы работаете?" size="50"
+							class="popup__input-text popup__input-text_type_job" required minlength="2" maxlength="200">
+						<span class="form__input-error set-job-input-error"></span>
+					</label>
+                <button type="submit" class="popup__save-button form__submit">Сохранить</button>
+				</fieldset>
             </form>
         </div>
     </div>
@@ -68,16 +76,25 @@
         <div class="popup__container">
             <button type="button" class="popup__close-button"></button>
             <h2 class="popup__title">Новое место</h2>
-            <form name="edit-form" class="popup__form">
-                <input type="text" name="set-place" placeholder="Название" size="50"
-                    class="popup__input-text popup__input-text_type_place">
-                <input type="text" name="set-link" placeholder="Ссылка на картинку" size="50"
-                    class="popup__input-text popup__input-text_type_link">
-                <button type="submit" class="popup__save-button">Сохранить</button>
+            <form name="edit-form" class="popup__form form">
+				<fieldset class="form__set">
+					<label class="form__field">
+						<input type="text" name="set-place" id="set-place-input" placeholder="Название" size="50"
+							class="popup__input-text popup__input-text_type_place" required minlength="2" maxlength="30">
+						<span class="form__input-error set-place-input-error"></span>
+					</label>
+					<label class="form__field">
+						<input type="url" name="set-link" id="set-link-input" placeholder="Ссылка на картинку" size="50"
+							class="popup__input-text popup__input-text_type_link" required>
+						<span class="form__input-error set-link-input-error"></span>
+					</label>
+					<button type="submit" class="popup__save-button form__submit button_inactive">Сохранить</button>
+				</fieldset>
             </form>
         </div>
     </div>
     <script src="./script/index.js"></script>
+    <script src="./script/validate.js"></script>
 
 </body>
 

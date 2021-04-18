@@ -112,3 +112,15 @@ function createCards(){
 	places.append(placeElements);
 }
 createCards();
+
+
+document.addEventListener('keydown', function (evt) {
+	const popup = document.querySelector('.popup_opened');
+	if (evt.key === 'Escape') closePopup(popup);
+});
+
+document.addEventListener('click', function (e) {
+	const popup = document.querySelector('.popup_opened');
+	if(e.target.className == 'elements__image') return;
+	if(e.target.closest('.popup__container') == null && popup != null && e.target.className != 'popup-image__picture' && e.target.className != 'profile__button-add' && e.target.className != 'profile__button-edit') closePopup(popup);
+});
