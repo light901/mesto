@@ -44,17 +44,20 @@ const setEventListeners = (formElement) => {
   });
 };
 
-const enableValidation = () => {
-  const formList = Array.from(document.querySelectorAll('.form'));
-  formList.forEach((formElement) => {
+const enableValidation = (conf) => {
+	console.log(conf);
+  conf.formList.forEach((formElement) => {
     formElement.addEventListener('submit', function (evt) {
       evt.preventDefault();
     });
 
-    const fieldsetList = Array.from(formElement.querySelectorAll('.form__set'));
-    fieldsetList.forEach((fieldSet) => {
+    conf.fieldsetList.forEach((fieldSet) => {
       setEventListeners(fieldSet);
     });
   });
 };
-enableValidation();
+const validationConfig = {
+    formList: Array.from(document.querySelectorAll('.form')),
+    fieldsetList: Array.from(document.querySelectorAll('.form__set'))
+} 
+enableValidation(validationConfig);

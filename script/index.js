@@ -12,35 +12,15 @@ const buttonAdd = document.querySelector('.profile__button-add');
 const popupFullImage = document.querySelector('.popup-image');
 const cardTemplate = document.querySelector('#elements-card').content;
 const places = document.querySelector('.elements');
-const initialCards = [
-    {
-        name: 'Карачаевск',
-        link: src='./images/1.jpg'
-    },
-    {
-        name: 'Гора Эльбрус',
-        link: src='./images/2.jpg'
-    },
-    {
-        name: 'Домбай',
-        link: src='./images/3.jpg'
-    },
-    {
-        name: 'Гора Эльбрус',
-        link: src='./images/4.jpg'
-    },
-    {
-        name: 'Домбай',
-        link: src='./images/5.jpg'
-    },
-    {
-        name: 'Карачаевск',
-        link: src='./images/6.jpg'
-    }
-];
+const listener = function(e){
+	const popup = document.querySelector('.popup_opened');
+	if(e.target === popup || e.key === 'Escape') closePopup(popup);
+}
 
 function openPopup(popup) {
 	popup.classList.add('popup_opened');
+	document.addEventListener('keydown', listener);
+	document.addEventListener('click', listener);
 }
 
 function openPopupEdit() {
@@ -51,6 +31,8 @@ function openPopupEdit() {
 
 function closePopup(popup) {
 	popup.classList.remove('popup_opened');
+	document.removeEventListener('click', listener);
+	document.removeEventListener('keydown', listener);
 }
 
 function formSubmitHandler(evt) {
@@ -69,8 +51,9 @@ function formSubmitHandlerPopupAdd(evt) {
 	const arr = { name: placeValue, link: placeLink };
 	const placeElement = createCard(arr);
 	places.prepend(placeElement);
+	this.closest('form').reset();
+	this.closest('form').querySelector('button').classList.add('popup__save-button_inactive');
 	closePopup(this.closest('.popup'));
-	linkInput.value = '', placeInput.value = '';
 };
 
 formAdd.addEventListener('submit', formSubmitHandlerPopupAdd);
@@ -112,15 +95,3 @@ function createCards(){
 	places.append(placeElements);
 }
 createCards();
-
-
-document.addEventListener('keydown', function (evt) {
-	const popup = document.querySelector('.popup_opened');
-	if (evt.key === 'Escape') closePopup(popup);
-});
-
-document.addEventListener('click', function (e) {
-	const popup = document.querySelector('.popup_opened');
-	if(e.target.className == 'elements__image') return;
-	if(e.target.closest('.popup__container') == null && popup != null && e.target.className != 'popup-image__picture' && e.target.className != 'profile__button-add' && e.target.className != 'profile__button-edit') closePopup(popup);
-});
