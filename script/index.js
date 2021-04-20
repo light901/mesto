@@ -39,7 +39,7 @@ function formSubmitHandler(evt) {
     evt.preventDefault();
     nameInput.textContent = nameForm.value;
     jobInput.textContent = jobForm.value;
-    closePopup(this.closest('.popup'));
+    closePopup(evt.target.closest('.popup'));
 }
 
 function formSubmitHandlerPopupAdd(evt) {
@@ -51,18 +51,18 @@ function formSubmitHandlerPopupAdd(evt) {
 	const arr = { name: placeValue, link: placeLink };
 	const placeElement = createCard(arr);
 	places.prepend(placeElement);
-	this.closest('form').reset();
-	this.closest('form').querySelector('button').classList.add('popup__save-button_inactive');
-	closePopup(this.closest('.popup'));
+	evt.target.closest('form').reset();
+	evt.target.closest('form').querySelector('button').classList.add('popup__save-button_inactive');
+	closePopup(evt.target.closest('.popup'));
 };
 
 formAdd.addEventListener('submit', formSubmitHandlerPopupAdd);
 
 buttonEdit.addEventListener('click', openPopupEdit);
 buttonAdd.addEventListener('click', function(){ openPopup(popupAdd) });
-popupAdd.querySelector('.popup__close-button').addEventListener('click', function(){ closePopup(this.closest('.popup')) });
-popupFullImage.querySelector('.popup__close-button').addEventListener('click', function(){ closePopup(this.closest('.popup')) });
-buttonClose.addEventListener('click', function(){ closePopup(this.closest('.popup')) });
+popupAdd.querySelector('.popup__close-button').addEventListener('click', function(e){ closePopup(e.target.closest('.popup')) });
+popupFullImage.querySelector('.popup__close-button').addEventListener('click', function(e){ closePopup(e.target.closest('.popup')) });
+buttonClose.addEventListener('click', function(e){ closePopup(e.target.closest('.popup')) });
 formElement.addEventListener('submit', formSubmitHandler);
 
 function createCard(cardData) {
